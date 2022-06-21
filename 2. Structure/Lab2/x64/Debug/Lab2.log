@@ -1,0 +1,5 @@
+﻿  Source.c
+C:\Users\Mihnea\Desktop\Data Structures\2. Structure\Lab2\Source.c(20,38): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\2. Structure\Lab2\Source.c(21,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\2. Structure\Lab2\Source.c(85,66): warning C4047: '=': 'Company **' differs in levels of indirection from 'Company *'
+  Lab2.vcxproj -> C:\Users\Mihnea\Desktop\Data Structures\2. Structure\Lab2\x64\Debug\Lab2.exe

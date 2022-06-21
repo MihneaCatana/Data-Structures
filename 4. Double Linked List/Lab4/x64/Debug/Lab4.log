@@ -1,0 +1,18 @@
+﻿  Source.c
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(17,32): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(18,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(20,39): warning C4047: '=': 'int' differs in levels of indirection from 'int *'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(198,50): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(198,46): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(199,47): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(199,43): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(200,49): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(200,45): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(201,54): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(201,50): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(202,56): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(202,52): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(204,56): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(204,52): warning C4024: 'createCar': different types for formal and actual parameter 2
+C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\Source.c(100): warning C4716: 'insertNodeEnd': must return a value
+  Lab4.vcxproj -> C:\Users\Mihnea\Desktop\Data Structures\4. Double Linked List\Lab4\x64\Debug\Lab4.exe
