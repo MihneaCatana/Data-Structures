@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\Mihnea\Desktop\Data Structures\6. Hash Table\Lab6\Source.c(17,31): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\6. Hash Table\Lab6\Source.c(18,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+  Lab6.vcxproj -> C:\Users\Mihnea\Desktop\Data Structures\6. Hash Table\Lab6\x64\Debug\Lab6.exe
