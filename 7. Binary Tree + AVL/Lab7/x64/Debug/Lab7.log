@@ -1,0 +1,5 @@
+﻿  Source.c
+C:\Users\Mihnea\Desktop\Data Structures\7. Binary Tree\Lab7\Source.c(16,35): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\7. Binary Tree\Lab7\Source.c(17,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\7. Binary Tree\Lab7\Source.c(128): warning C4715: 'searchPlaneId': not all control paths return a value
+  Lab7.vcxproj -> C:\Users\Mihnea\Desktop\Data Structures\7. Binary Tree\Lab7\x64\Debug\Lab7.exe
