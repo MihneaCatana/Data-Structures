@@ -1,0 +1,8 @@
+﻿  Source.c
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(16,31): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(17,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(298,13): warning C4013: 'strcmp' undefined; assuming extern returning int
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(384,47): warning C4133: '=': incompatible types - from 'Node **' to 'NodeHash **'
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(550): warning C4715: 'findStudentAfterAge': not all control paths return a value
+C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\Source.c(768): warning C4716: 'findNode': must return a value
+  Lab10.vcxproj -> C:\Users\Mihnea\Desktop\Data Structures\Others\Every Structure\Lab10\x64\Debug\Lab10.exe
