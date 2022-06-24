@@ -157,6 +157,195 @@ void freeGraph(NodeGraph** graf)
 	*graf = NULL;
 }
 
+// for traversing graphs, we need to use a queue
+
+typedef struct NodeQueue NodeQueue;
+
+struct NodeQueue
+{
+	NodeQueue* prev;
+	int id;
+	NodeQueue* after;
+};
+
+typedef struct Queue Queue;
+
+struct Queue
+{
+	NodeQueue* firstNode;
+	NodeQueue* lastNode;
+};
+
+void pushStack(int id, Queue* list)
+{
+	NodeQueue* newNode = (NodeQueue*)malloc(sizeof(NodeQueue));
+	newNode->id = id;
+	newNode->after = NULL;
+	newNode->prev = list->lastNode;
+
+	if (list->lastNode)
+	{
+		list->lastNode->after = newNode;
+	}
+	else
+	{
+		list->firstNode = newNode;
+	}
+
+	list->lastNode = newNode;
+}
+
+void pushQueue(int id, Queue* list)
+{
+	NodeQueue* newNode = (NodeQueue*)malloc(sizeof(NodeQueue));
+	newNode->id = id;
+	newNode->prev = NULL;
+	newNode->after = NULL;
+
+	if (list->firstNode)
+	{
+		newNode->after = list->firstNode;
+		list->firstNode->prev = newNode;
+		
+	}
+	else
+		list->lastNode = newNode;
+
+	list->firstNode = newNode;
+}
+
+int pop(Queue* list)
+{
+	int e;
+
+	if (list)
+	{
+		e = list->lastNode->id;
+
+		list->lastNode = list->lastNode->prev;
+		if (list->lastNode)
+		{
+			free(list->lastNode->after);
+			list->lastNode->after = NULL;
+		}
+		else
+		{
+			free(list->firstNode);
+			list->firstNode = NULL;
+		}
+
+		return e;
+
+	}
+	else return -1;
+}
+
+void displayQueue(Queue q)
+{
+	if (q.firstNode)
+	{
+		NodeQueue* iter = q.firstNode;
+
+		while (iter)
+		{
+			printf("%i \t", iter->id);
+			iter = iter->after;
+		}
+
+		printf("\n");
+	}
+}
+
+int calculateDimension(NodeGraph* q)
+{
+	if (q)
+	{
+		int contor = 0;
+		NodeGraph* iter = q;
+
+		while (iter)
+		{
+			contor++;
+			iter = iter->next;
+		}
+
+		return contor;
+	}
+	return 0;
+}
+
+void BreadthTraverse(int idStart,NodeGraph* g) //parcurgere in latime 
+{
+	//this array is used to check if the Node was visited
+	int dim = calculateDimension(g);
+
+	int* vector = (int*)malloc(sizeof(int) * dim);
+	for (int i = 0; i < dim; i++)
+		vector[i] = 0;
+
+	Queue queue;
+	queue.firstNode = NULL;
+	queue.lastNode = NULL;
+
+	pushQueue(idStart, &queue);
+	vector[idStart - 1] = 1;
+
+	while (queue.firstNode)
+	{
+		int id = pop(&queue);
+		NodeGraph* graf = findNode(id, g);
+		displayCity(graf->c);
+
+		Node* muchii = graf->lines;
+
+		while (muchii)
+		{
+			if (vector[muchii->address->c.id - 1] == 0)
+			{
+				pushQueue(muchii->address->c.id , &queue);
+				vector[muchii->address->c.id - 1] = 1;
+			}
+			muchii = muchii->next;
+		}
+	}
+
+}
+
+void DepthTraverse(int idStart, NodeGraph* graph)
+{
+	int dim = calculateDimension(graph);
+	int* vector = (int*)malloc(sizeof(int) * dim);
+	for (int i = 0; i < dim; i++)
+		vector[i] = 0;
+
+	Queue stack;
+	stack.firstNode = NULL;
+	stack.lastNode = NULL;
+
+	pushStack(idStart, &stack);
+	vector[idStart-1] = 1;
+
+	while (stack.firstNode)
+	{
+		int id = pop(&stack);
+		NodeGraph* find = findNode(id, graph);
+		displayCity(find->c);
+
+		Node* muchii = find->lines;
+
+		while (muchii)
+		{
+			if (vector[muchii->address->c.id-1] == 0)
+			{
+				pushStack(muchii->address->c.id, &stack);
+				vector[muchii->address->c.id - 1] = 1;
+			}
+			muchii = muchii->next;
+		}
+
+	}
+}
+
 int main()
 {
 	NodeGraph* graf = NULL;
@@ -178,6 +367,11 @@ int main()
 	createLinkNodes(2, 6, graf);
 	createLinkNodes(5, 6, graf);
 
-	displayGraph(graf);
+	//displayGraph(graf);
+
+	BreadthTraverse(1, graf);
+	printf("*************\n\n");
+	DepthTraverse(1, graf);
+
 	freeGraph(&graf);
 }
